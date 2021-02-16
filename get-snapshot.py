@@ -46,8 +46,8 @@ def get_config(task):
     # add timestamp to the folder
     task.run(
         task=write_file,
-        content=time_stamp(),
-        filename=f'configs/snapshot-timestamp.log'
+        content='> ' + time_stamp(),
+        filename=f'configs/snapshot-timestamp.md'
     )
 
 
@@ -78,8 +78,8 @@ def run_a_command_list(task, a_command_list):
         # add timestamp to the folder
         task.run(
             task=write_file,
-            content=time_stamp(),
-            filename=f'{dir_name}/snapshot-timestamp.log'
+            content='> ' + time_stamp(),
+            filename=f'{dir_name}/snapshot-timestamp.md'
         )
 
 
