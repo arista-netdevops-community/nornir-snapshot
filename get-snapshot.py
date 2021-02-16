@@ -57,7 +57,11 @@ if __name__ == "__main__":
     if result.failed:
         print(result.failed_hosts)
 
-    result = nr.run(task=run_a_command_list, a_command_list=['show version'])
+    snapshot_command_list = list()
+    with open('snapshot_commands.txt', 'r') as snapshot_commands_file:
+        snapshot_command_list = [ a_line.strip() for a_line in snapshot_commands_file ]
+
+    result = nr.run(task=run_a_command_list, a_command_list=snapshot_command_list)
     if result.failed:
         print(result.failed_hosts)
         print_result(result)
