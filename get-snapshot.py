@@ -9,6 +9,7 @@ from nornir_napalm.plugins.tasks import napalm_cli
 import json
 import os
 import re
+from getpass import getpass
 
 nr = InitNornir(config_file='config.yaml')
 
@@ -58,6 +59,13 @@ if __name__ == "__main__":
             os.mkdir('configs')
     if not os.path.isdir('show_commands'):
             os.mkdir('show_commands')
+
+    # get username and password to avoid saving them
+    username = input("Username: ")
+    password = getpass()
+    for host in nr.inventory.hosts.values():
+        host.username = username
+        host.password = password
 
     result = nr.run(task=get_config)
     if result.failed:
