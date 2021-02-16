@@ -49,6 +49,7 @@ def run_a_command_list(task, a_command_list):
             content=result.result[a_command],
             filename=f'{dir_name}/{task.host}.txt'
         )
+        print('Saved ' + f'{dir_name}/{task.host}.txt')
 
 
 if __name__ == "__main__":
