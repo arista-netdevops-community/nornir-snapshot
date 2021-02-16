@@ -37,7 +37,7 @@ def run_a_command_list(task, a_command_list):
         # build sub directory name
         sub_dir_name = ''
         while word_list:
-            sub_dir_name += word_list.pop()
+            sub_dir_name += word_list.pop(0)
             if word_list:  # if not the last word, add separator
                 sub_dir_name += '-'
         dir_name = f'show_commands/{sub_dir_name}'
