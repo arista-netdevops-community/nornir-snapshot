@@ -75,6 +75,12 @@ def run_a_command_list(task, a_command_list):
             filename=f'{dir_name}/{task.host}.txt'
         )
         print('Saved ' + f'{dir_name}/{task.host}.txt')
+        # add timestamp to the folder
+        task.run(
+            task=write_file,
+            content=time_stamp(),
+            filename=f'{dir_name}/snapshot-timestamp.log'
+        )
 
 
 if __name__ == "__main__":
