@@ -43,6 +43,12 @@ def get_config(task):
         filename=f'configs/{task.host}.cfg'
     )
     print('Saved ' + f'configs/{task.host}.cfg')
+    # add timestamp to the folder
+    task.run(
+        task=write_file,
+        content=time_stamp(),
+        filename=f'configs/snapshot-timestamp.log'
+    )
 
 
 def run_a_command_list(task, a_command_list):
