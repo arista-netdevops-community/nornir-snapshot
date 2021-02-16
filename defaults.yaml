@@ -1,4 +1,5 @@
 ---
-username: cvpadmin
-password: arista123
+# get-snapshot will ask for username and password
+# username: admin
+# password: admin
 platform: eos
