@@ -13,4 +13,4 @@
 11. Enter login and password.
 12. Check `configs` and `show-commands` directories after execution.
 
-> You can also use `get-show-tech.py` to collect show tech from every device quickly.
+> You can also use `get-tech-support.py` to collect show tech from every device quickly.
