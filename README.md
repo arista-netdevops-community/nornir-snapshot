@@ -13,4 +13,6 @@
 11. Enter login and password.
 12. Check `configs` and `show-commands` directories after execution.
 
-> You can also use `get-tech-support.py` to collect show tech from every device quickly.
+> You can also use `get-tech-support.py` to collect show tech from every device quickly.  
+---
+> If you prefer Ansible, take a look at [Ansible-AVD eos_snapshot role](https://github.com/aristanetworks/ansible-avd/tree/devel/ansible_collections/arista/avd/roles/eos_snapshot).
