@@ -53,15 +53,15 @@ def run_a_command_list(task, a_command_list):
 
 
 if __name__ == "__main__":
-    result = nr.run(task=get_config)
-    if result.failed:
-        print(result.failed_hosts)
-
     # create base directories if they do not exist
     if not os.path.isdir('configs'):
             os.mkdir('configs')
     if not os.path.isdir('show_commands'):
             os.mkdir('show_commands')
+
+    result = nr.run(task=get_config)
+    if result.failed:
+        print(result.failed_hosts)
 
     snapshot_command_list = list()
     with open('snapshot_commands.txt', 'r') as snapshot_commands_file:
