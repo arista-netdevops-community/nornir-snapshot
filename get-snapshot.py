@@ -57,6 +57,12 @@ if __name__ == "__main__":
     if result.failed:
         print(result.failed_hosts)
 
+    # create base directories if they do not exist
+    if not os.path.isdir('configs'):
+            os.mkdir('configs')
+    if not os.path.isdir('show_commands'):
+            os.mkdir('show_commands')
+
     snapshot_command_list = list()
     with open('snapshot_commands.txt', 'r') as snapshot_commands_file:
         snapshot_command_list = [ a_line.strip() for a_line in snapshot_commands_file ]
