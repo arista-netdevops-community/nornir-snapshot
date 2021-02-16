@@ -1,5 +1,7 @@
 # How to use nornir-snapshot
 
+> This README is created for MacOS or Linux. On Windows install WSL first.
+
 1. Clone this repository.
 2. Review `config.yaml`. Normally there is no need to adjust it, but you may check number of workers running at once.
 3. Check `defaults.yaml`. Generally, nothing to do here. Login and password are commented as get-snapshot.py will prompt for them during execution.
