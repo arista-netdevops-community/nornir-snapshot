@@ -1,0 +1,4 @@
+nornir
+nornir_napalm
+nornir_utils
+nornir-jinja2

@@ -1,0 +1,8 @@
+---
+SNAPSHOT:
+  data:
+    site: ANYWHERE
+  connection_options:
+    napalm:
+      extras:
+        timeout: 300
